@@ -16,7 +16,7 @@ Ce qui donne, par exemple:
 
 * EmissionEntiere.sh
 
-Permet de télécharger une émission entière à partir de la première page de l'émission. Par exemple [ici](https://www.franceinter.fr/emissions/la-tete-au-carre), [là](https://www.franceinter.fr/emissions/la-marche-de-l-histoire), [là](https://www.franceinter.fr/emissions/le-masque-et-la-plume], et [là](https://www.franceinter.fr/emissions/la-bande-originale).
+Permet de télécharger une émission entière à partir de la première page de l'émission. Par exemple [ici](https://www.franceinter.fr/emissions/la-tete-au-carre), [là](https://www.franceinter.fr/emissions/la-marche-de-l-histoire), [là](https://www.franceinter.fr/emissions/le-masque-et-la-plume), et [là](https://www.franceinter.fr/emissions/la-bande-originale).
 
 Ainsi, pour Le masque et la plume:
 
