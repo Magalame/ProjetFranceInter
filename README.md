@@ -10,7 +10,7 @@ Permet de télécharger une émission d'un programme. Par exemple pour télécha
 * LoopInterPage.sh
 Permet de télécharger une page entière d'un programme, tel qu'[ici](https://www.franceinter.fr/emissions/la-tete-au-carre), [là](https://www.franceinter.fr/emissions/la-tete-au-carre?p=2), ou [là](https://www.franceinter.fr/emissions/la-tete-au-carre?p=3)
 
-Ce qui donne, par exemple:
+Ce qui donne, par exemple pour la troisième page de La tête au carré:
 
 `./LoopInterPage.sh https://www.franceinter.fr/emissions/la-tete-au-carre?p=3`
 
