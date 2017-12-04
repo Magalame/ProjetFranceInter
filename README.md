@@ -2,7 +2,7 @@
 
 Les trois scripts permettent de télécharger trois types de contenus différent:
 
-⋅⋅* capt.sh
+..* capt.sh
 Permet de télécharger une émission d'un programme. Par exemple pour télécharger [l'émission du 1er décembre de La tête au carré](https://www.franceinter.fr/emissions/la-tete-au-carre/la-tete-au-carre-01-decembre-2017), taper:
 
 `./capt.sh https://www.franceinter.fr/emissions/la-tete-au-carre/la-tete-au-carre-01-decembre-2017`
