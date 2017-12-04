@@ -93,4 +93,4 @@ wget -O "$nom_final" $url_var
 fi
 
 #id3tool -t $nom_entier_pod_var -a $nom_prog -Y $annee $nom_final
-eyeD3 -2 --set-encoding=utf16-BE -t "$nom_entier_pod_var" -A "$nom_prog" -Y "$annee" "$nom_final"
+#eyeD3 -2 --set-encoding=utf16-BE -t "$nom_entier_pod_var" -A "$nom_prog" -Y "$annee" "$nom_final" # à décommenter si vous voulez le tag et que vous avez eyeD3 installé
