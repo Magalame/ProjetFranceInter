@@ -15,13 +15,13 @@ echo "Adresse recue par capt.sh:$1"
 
 nom_pod=$(echo "$1" | cut -f 6 -d "/")
 
+#echo "-----------------------------------------------------------------------"
+
+#echo "Nom html podcast:" $nom_pod
+
 echo "-----------------------------------------------------------------------"
 
-echo "Nom html podcast:" $nom_pod
-
-echo "-----------------------------------------------------------------------"
-
-cat html_page | grep "$nom_pod" | grep "title" | head -n 1 | awk -F '<title>' '{print $2}' | awk -F '</title>' '{print $1}' | sed 's/&#039;/'\''/g' | sed 's/[/]/-/g' | sed 's/[(?]//g' | sed 's/)//g' | sed 's/:/;/g' | sed 's/&quot;/"/g' > nom_entier_pod
+cat html_page | grep "$nom_pod" | grep "title" | head -n 1 | awk -F '<title>' '{print $2}' | awk -F '</title>' '{print $1}' | sed 's/&#039;/'\''/g' | sed 's/[/]/-/g' | sed 's/[(?]//g' | sed 's/)//g' | sed 's/:/;/g' | sed 's/&quot;/"/g' > nom_entier_pod #on enlève les caractères qui peuvent poser problème
 
 nom_entier_pod_var=$(cat nom_entier_pod)
 
@@ -32,16 +32,16 @@ echo "-----------------------------------------------------------------------"
 cat html_page | grep "data-url" | grep ".mp3" | sed 's/"/\n/g' | grep ".mp3" | head -n 1 > url
 url_var=$(cat url)
 
-echo "Url var:" $url_var
-echo "-----------------------------------------------------------------------"
+echo "Url du fichier:" $url_var
+#echo "-----------------------------------------------------------------------"
 
 nom_prog_html_var=$(echo "$1" | cut -f 5 -d "/")
 
-echo "Nom prog html: $nom_prog_html_var"
+#echo "Nom prog html: $nom_prog_html_var"
 set=$(echo "$nom_prog_html_var\">")
 
 echo "-----------------------------------------------------------------------"
-cat html_page | grep "$nom_prog_html_var" | awk -F "$set" '{print $2}' | awk -F '</a>' '{print $1}' | uniq | head -n 2 | tail -n 1 | sed 's/&#039;/'\''/g' | sed 's/[/]/-/g' | sed 's/[?(]//g' | sed 's/)//g' | sed 's/:/;/g' | sed 's/&quot;/"/g' > nom_prog
+cat html_page | grep "$nom_prog_html_var" | awk -F "$set" '{print $2}' | awk -F '</a>' '{print $1}' | uniq | head -n 2 | tail -n 1 | sed 's/&#039;/'\''/g' | sed 's/[/]/-/g' | sed 's/[?(]//g' | sed 's/)//g' | sed 's/:/;/g' | sed 's/&quot;/"/g' > nom_prog #on enlève les caractères qui peuvent poser problème
 
 nom_prog=$(cat nom_prog)
 
@@ -66,33 +66,34 @@ rm -R work
 
 if [ "$2" = "-y" ]; then
 
-if [ ! -d "/mnt/d/Radio/$nom_prog" ]; then
-mkdir "/mnt/d/Radio/$nom_prog"
-fi
+    if [ ! -d "/mnt/d/Radio/$nom_prog" ]; then
+        mkdir "/mnt/d/Radio/$nom_prog"
+    fi
 
-cd "/mnt/d/Radio/$nom_prog"
+    cd "/mnt/d/Radio/$nom_prog"
 
-if [ -f "$nom_final" ]; then
+    if [ -f "$nom_final" ]; then
 
-echo "Le fichier existe déjà sous le nom: $nom_final"
-exit
+        echo "Le fichier existe déjà sous le nom: $nom_final"
 
-fi
+    	exit
 
-wget -O "$nom_final" $url_var
+    fi
+
+    wget -O "$nom_final" $url_var
 
 fi
 
 if [ "$2" != "-y" ]; then
 
-if [ -f "$nom_final" ]; then
+    if [ -f "$nom_final" ]; then
 
-echo "Le fichier existe déjà sous le nom: $nom_final"
-exit
+        echo "Le fichier existe déjà sous le nom: $nom_final"
+        exit
 
-fi
+    fi
 
-wget -O "$nom_final" $url_var
+    wget -O "$nom_final" $url_var
 
 fi
 
