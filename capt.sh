@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /tmp
+
 if [ ! -d "work" ]; then
   mkdir work
 fi
