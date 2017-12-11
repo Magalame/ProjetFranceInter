@@ -19,7 +19,7 @@ Puis, pour télécharger le .tar (recommendé):
 
 On rend les scripts executables:
 
-`chmod +x capt.sh LoopInterPage.sh EmissionEntiereInter.sh
+`chmod +x capt.sh LoopInterPage.sh EmissionEntiereInter.sh`
 
 Pour ceux qui le souhaite, il y a aussi un .zip, mais c'est moins pratique sous unix:
 
@@ -48,4 +48,49 @@ Permet de télécharger **un programme entier** à partir de la première page d
 
 Ainsi, pour Le masque et la plume:
 
-`./EmissionEntiere.sh https://www.franceinter.fr/emissions/le-masque-et-la-plume`
+`./EmissionEntiereInter.sh https://www.franceinter.fr/emissions/le-masque-et-la-plume`
+
+-----------------------------------------------------
+
+# Download
+
+Let's start by creating a folder as there are several files:
+
+`mkdir ProjetFranceInter`
+`cd ProjetFranceInter`
+
+Then download them
+
+`wget https://github.com/Magalame/ProjetFranceInter/raw/master/ProjetFranceInter.tar`
+
+`tar -xvf ProjetFranceInter.tar`
+
+Make them executable:
+
+`chmod +x capt.sh LoopInterPage.sh EmissionEntiereInter.sh`
+
+You can also get the zip version if you want:
+
+`wget https://github.com/Magalame/ProjetFranceInter/raw/master/ProjetFranceInter.zip`
+
+## Use
+
+The three scripts allows you to download three different types of content:
+
+### capt.sh
+
+Downloads one podcast of a program. For example [that one](https://www.franceinter.fr/emissions/la-tete-au-carre/la-tete-au-carre-01-decembre-2017):
+
+`./capt.sh https://www.franceinter.fr/emissions/la-tete-au-carre/la-tete-au-carre-01-decembre-2017`
+
+### LoopInterPage.sh
+
+Downloads all the podcasts on a same webpage, for example [this whole page](https://www.franceinter.fr/emissions/la-tete-au-carre), [là](https://www.franceinter.fr/emissions/la-tete-au-carre?p=2):
+
+`./LoopInterPage.sh https://www.franceinter.fr/emissions/la-tete-au-carre?p=3`
+
+### EmissionEntiereInter.sh
+
+Downloads the whole program from the url of the first page. For example [here](https://www.franceinter.fr/emissions/la-tete-au-carre), [là](https://www.franceinter.fr/emissions/la-marche-de-l-histoire), [here](https://www.franceinter.fr/emissions/le-masque-et-la-plume), and [there](https://www.franceinter.fr/emissions/la-bande-originale). Which could give:
+
+`./EmissionEntiereInter.sh https://www.franceinter.fr/emissions/le-masque-et-la-plume`
