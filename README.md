@@ -85,12 +85,12 @@ Downloads one podcast of a program. For example [that one](https://www.franceint
 
 ### LoopInterPage.sh
 
-Downloads all the podcasts on a same webpage, for example [this whole page](https://www.franceinter.fr/emissions/la-tete-au-carre), [là](https://www.franceinter.fr/emissions/la-tete-au-carre?p=2):
+Downloads all the podcasts on a same webpage, for example [this whole page](https://www.franceinter.fr/emissions/la-tete-au-carre?p=3):
 
 `./LoopInterPage.sh https://www.franceinter.fr/emissions/la-tete-au-carre?p=3`
 
 ### EmissionEntiereInter.sh
 
-Downloads the whole program from the url of the first page. For example [here](https://www.franceinter.fr/emissions/la-tete-au-carre), [là](https://www.franceinter.fr/emissions/la-marche-de-l-histoire), [here](https://www.franceinter.fr/emissions/le-masque-et-la-plume), and [there](https://www.franceinter.fr/emissions/la-bande-originale). Which could give:
+Downloads the whole program from the url of the first page. For example [here](https://www.franceinter.fr/emissions/la-tete-au-carre), [here](https://www.franceinter.fr/emissions/la-marche-de-l-histoire), [here](https://www.franceinter.fr/emissions/le-masque-et-la-plume), and [there](https://www.franceinter.fr/emissions/la-bande-originale). Which could give:
 
 `./EmissionEntiereInter.sh https://www.franceinter.fr/emissions/le-masque-et-la-plume`
