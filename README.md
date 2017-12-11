@@ -17,6 +17,10 @@ Puis, pour télécharger le .tar (recommendé):
 
 `tar -xvf ProjetFranceInter.tar`
 
+On rend les scripts executables:
+
+`chmod +x capt.sh LoopInterPage.sh EmissionEntiereInter.sh
+
 Pour ceux qui le souhaite, il y a aussi un .zip, mais c'est moins pratique sous unix:
 
 `https://github.com/Magalame/ProjetFranceInter/raw/master/ProjetFranceInter.zip`
